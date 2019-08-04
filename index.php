@@ -1,5 +1,5 @@
-<html lang="en">
 <?php
+header("Content-Type: application/json");
 session_start();
 //require config
 require __DIR__ . '/config.php';
@@ -21,12 +21,14 @@ $router = new Router();
 // Define routes
 // ....
 //defining errors
-$router->set404(function (){
-  require (renderView('errorpage'));
+$router->set404(function () {
+    echo "Make use of /api";
 });
 
-//include major routes
-require ('router.php');
+//default home
+$router->all("/", function (){
+   echo "FlatRoad Api engine is running fine, use /api to start coding...";
+});
 
 // Run it!
 $router->run();
@@ -36,4 +38,3 @@ function renderView($viewName){
     return (__DIR__.'/views/'.$viewName.'.php');
 }
 ?>
-</html>

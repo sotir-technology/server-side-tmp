@@ -5,8 +5,8 @@ const APP_DEV_MODE=true; //application in development mode,
 const APP_TURBO_MODE=false; //application in turbo mode, loading faster. note: make sure you perform all form submission in ajax call or axio
 const APP_USE_AXIOS=true; //use axios library
 //application base folder name
-const APP_BASE_NAME="/wc_superadmin/"; //with a trailing slash
-const APP_FILE_PATH="http://localhost/wc_superadmin/";
+const APP_BASE_NAME="/"; //with a trailing slash
+const APP_FILE_PATH="/";
 //Database config
 const DB_HOST='localhost';
 const DB_USER='root';
